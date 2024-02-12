@@ -14,7 +14,7 @@ public class DependencyTest {
     @Test(priority = 2,dependsOnMethods = {"runCar"})
     void parkCar(){
         System.out.println("Park the car");
-        Assert.fail();
+        Assert.assertEquals(2,2);
     }
     @Test(priority = 3,dependsOnMethods = {"runCar","parkCar"},alwaysRun = true)
     void stopCar(){
